@@ -1,0 +1,21 @@
+
+ 
+ <% @applys.each do |apply| %>
+   <% if  @post_by_title.id == apply.post_id || current_user.id == apply.user_id%>
+
+     Post  <%= apply.post_id %>    
+     Appliyed before  <%= time_ago_in_words(apply.created_at) %>    
+     <br>
+     <% else %>
+     
+   <% end %>
+
+ <% end %>
+
+<br><br><br><br>
+Job Infromation<br>
+Required Experience: - <%= @post_by_title.experience %>
+<br>Posted By: - <%= @post_by_title.user_id %>
+<br>Job id: - <%= @post_by_title.id %>
+<br>Title Of Job: - <%= @post_by_title.title %>
+

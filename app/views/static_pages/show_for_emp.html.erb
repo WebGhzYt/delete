@@ -1,0 +1,16 @@
+
+Alredy Applied
+ 
+ <% @applys.each do |apply| %>
+ 	<% if  @post_by_title.id == apply.post_id %>
+		<%= apply.user_id %> 	
+ 	<% end %>
+
+ <% end %>
+
+<br><br><br><br>
+Job Infromation<br>
+Recquired Experience: - <%= @post_by_title.experience %>
+<br>Posted By: - <%= @post_by_title.user_id %>
+<br>Title Of Job: - <%= @post_by_title.id %>
+
